@@ -1,12 +1,18 @@
-<h1>Movie detail view</h1>
-<a href="/movies"><button>Back to overview</button></a>
-<img src="{{movie.image}}" alt="" />
-<h1>{{movie.title}}</h1>
-{{#each movie.stars}}
-  <li>{{this}}</li>
-{{/each}}
-<h3>{{movie.director}}</h3>
-<p>{{movie.description}}</p>
-{{#each movie.showtimes}}
-  <span>{{this}}</span>
-{{/each}}
+<h1 class="text-6xl">Movie detail view</h1>
+<a href="/movies"><button
+    class="text-2xl text-white border-solid border-2 bg-sky-600"
+  >Back to overview</button></a>
+
+<div class="flex flex-row">
+  <img src="{{movie.image}}" alt="" />
+  <div class="flex flex-col"> 
+    <h1>{{movie.title}}</h1>
+  {{#each movie.stars}}
+    <li>{{this}}</li>
+  {{/each}}
+  <h3>{{movie.director}}</h3>
+  <p>{{movie.description}}</p>
+  {{#each movie.showtimes}}
+    <span>{{this}}</span>
+  {{/each}}</div></div>
+ 

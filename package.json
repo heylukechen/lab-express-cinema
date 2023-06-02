@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js",
-    "seed":"node seeds/movies.seed.js"
+    "dev": "concurrently \"npx tailwindcss -i ./public/stylesheets/style.css -o ./public/newStylesheets/output.css --watch\" \"nodemon server.js\"",
+    "seed": "node seeds/movies.seed.js"
   },
   "dependencies": {
     "cookie-parser": "^1.4.5",
@@ -17,6 +17,10 @@
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "autoprefixer": "^10.4.14",
+    "concurrently": "^6.5.1",
+    "nodemon": "^2.0.7",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.2"
   }
 }
