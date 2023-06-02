@@ -1,0 +1,11 @@
+<h1>Movies list</h1>
+<a href="/"><button>Back to home</button></a>
+{{#if allMovies}}
+  {{#each allMovies}}
+    <img src="{{image}}" alt="" />
+    <h1>{{title}}</h1>
+    <a href="/movies/{{_id}}"><button>See more</button></a>
+  {{/each}}
+{{else}}
+  <p>No movies found.</p>
+{{/if}}

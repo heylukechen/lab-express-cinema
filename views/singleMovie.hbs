@@ -1,0 +1,12 @@
+<h1>Movie detail view</h1>
+<a href="/movies"><button>Back to overview</button></a>
+<img src="{{movie.image}}" alt="" />
+<h1>{{movie.title}}</h1>
+{{#each movie.stars}}
+  <li>{{this}}</li>
+{{/each}}
+<h3>{{movie.director}}</h3>
+<p>{{movie.description}}</p>
+{{#each movie.showtimes}}
+  <span>{{this}}</span>
+{{/each}}
